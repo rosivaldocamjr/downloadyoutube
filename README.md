@@ -6,7 +6,7 @@ O projeto utiliza pytubefix para a lógica de download e FFmpeg para unir os str
 ---
 
 ### ✨ Features
--Interface web limpa e intuitiva para facilitar o uso.
+- Interface web limpa e intuitiva para facilitar o uso.
 
 - Download de vídeos individuais do YouTube.
 
