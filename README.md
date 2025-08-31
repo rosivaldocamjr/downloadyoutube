@@ -49,7 +49,7 @@ ffmpeg -version
 ### 🚀 Instalação e Execução
 Siga os passos abaixo para configurar e rodar o projeto localmente.
 
-1. Clone o Repositório
+Clone o Repositório
 Primeiro, clone este repositório para a sua máquina local.
 
 ```Bash
@@ -57,7 +57,7 @@ git clone <URL_DO_SEU_REPOSITORIO_GIT>
 cd <NOME_DA_PASTA_DO_PROJETO>
 ```
 
-2. Crie e Ative o Ambiente Virtual
+Crie e Ative o Ambiente Virtual
 É uma boa prática isolar as dependências do projeto em um ambiente virtual.
 
 ```Bash
@@ -71,7 +71,7 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Instale as Dependências com pip-sync
+Instale as Dependências com pip-sync
 Este projeto utiliza pip-tools para um gerenciamento preciso das dependências. Primeiro, instale a ferramenta e, em seguida, sincronize seu ambiente usando o arquivo 
 
 requirements.in.
@@ -85,7 +85,7 @@ pip install pip-tools
 pip-sync requirements.in
 ```
 
-4. Execute a Aplicação
+Execute a Aplicação
 Com tudo configurado, inicie o servidor Flask.
 
 ```Bash
@@ -95,7 +95,7 @@ O servidor estará disponível em http://127.0.0.1:5000.
 
 --- 
 
-💻 Como Usar
+### 💻 Como Usar
 1. Abra seu navegador e acesse http://127.0.0.1:5000.
 
 2. Cole a URL de um vídeo do YouTube no campo "URL do vídeo".
