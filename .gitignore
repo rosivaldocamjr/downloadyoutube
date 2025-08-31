@@ -1,0 +1,14 @@
+# Ambiente Virtual
+.venv/
+venv/
+*/.venv/
+*/venv/
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pasta de downloads gerada pela aplicação
+downloads/

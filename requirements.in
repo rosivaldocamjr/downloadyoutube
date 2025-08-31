@@ -1,0 +1,10 @@
+# Runtime
+pytubefix
+flask
+
+# Desenvolvimento
+pytest
+pytest-cov
+ruff
+mypy
+types-requests

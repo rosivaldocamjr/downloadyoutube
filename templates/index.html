@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Baixar Vídeo YouTube</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 40px; background-color: #f4f4f9; color: #333; }
+        .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #d9230f; }
+        label { font-weight: bold; }
+        input, select, button { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #ff0000; color: white; font-size: 16px; border: none; cursor: pointer; transition: background-color 0.3s; }
+        button:hover { background-color: #c00; }
+        .msg { margin: 15px 0; padding: 12px; border-radius: 5px; text-align: center; }
+        .flashes .msg { background: #e9ecef; color: #495057; border: 1px solid #ced4da; }
+        #results { margin-top: 20px; padding: 15px; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 5px; text-align: center; }
+        #results a { display: inline-block; background-color: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        #results a:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Baixar vídeo do YouTube</h2>
+    
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flashes">
+          {% for msg in messages %}
+            <div class="msg">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post">
+        <label for="url">URL do vídeo:</label>
+        <input type="text" id="url" name="url" placeholder="https://www.youtube.com/watch?v=..." required>
+
+        <label for="qualidade">Qualidade:</label>
+        <select id="qualidade" name="qualidade">
+            <option value="best">Melhor disponível</option>
+            <option value="1080p">1080p</option>
+            <option value="720p">720p</option>
+            <option value="480p">480p</option>
+            <option value="360p">360p</option>
+        </select>
+
+        <button type="submit">Baixar</button>
+    </form>
+    
+    {% if filename %}
+    <div id="results">
+        <p>Seu arquivo está pronto!</p>
+        <a href="{{ url_for('download_file', filename=filename) }}" download>Clique aqui para baixar: {{ filename }}</a>
+    </div>
+    {% endif %}
+
+</div>
+</body>
+</html>
