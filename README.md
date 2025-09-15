@@ -82,7 +82,7 @@ pip install pip-tools
 
 # 2. Sincronize o ambiente. O pip-sync instalará exatamente
 #    o que está especificado no arquivo de requerimentos.
-pip-sync requirements.in
+pip-sync requirements.in ou pip-sync
 ```
 
 Execute a Aplicação
